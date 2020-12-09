@@ -1,0 +1,12 @@
+>> cmd to launck ec2 instance from cli, inside custom vpc public subnet, custom security group.
+aws ec2 run-instances --image-id ami-d90c57bc --count 1 --instance-type t2.micro --key-name EC2-1TEST --security-group-ids  sg-028cdeada1f8b4274 
+--subnet-id subnet-0cbd92623e4e307d0 --region us-east-2
+
+>> Parameters to be updated accordingly - image-id, key-name, sg, subnet, region.
+
+> errors encountered and solution:
+ec2-user@ec2-18-222-43-2.us-east-2.compute.amazonaws.com: Permission denied (publickey).
+>> fix above error for windows -> go to the directory of .pem file
+Eg: cd C:\Users\Soma\Downloads
+
+
